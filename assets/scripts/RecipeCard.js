@@ -1,8 +1,10 @@
 class RecipeCard extends HTMLElement {
   constructor() {
     // Part 1 Expose - TODO
-
+    super();
+  
     // You'll want to attach the shadow DOM here
+    let shadow = this.attachShadow({mode: 'open'});
   }
 
   set data(data) {
@@ -100,6 +102,9 @@ class RecipeCard extends HTMLElement {
     // created in the constructor()
 
     // Part 1 Expose - TODO
+    let recipe = document.querySelector("recipe-card");
+    let url = getUrl(recipe.data);
+    
   }
 }
 
